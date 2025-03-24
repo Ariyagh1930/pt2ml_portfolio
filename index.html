@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARIYA M - Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+      background-color: #000;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: url('https://www.transparenttextures.com/patterns/black-thread-light.png'), linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
+      background-size: 400% 400%;
+      animation: gradientBackground 10s infinite alternate ease-in-out;
+      z-index: -1;
+    }
+
+    @keyframes gradientBackground {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    nav {
+      background-color: rgba(0, 123, 255, 0.9);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 15px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.2rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00c9ff;
+      transform: translateY(-3px);
+    }
+
+    header {
+      text-align: center;
+      padding: 200px 20px 80px;
+      color: white;
+      text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.6);
+      animation: fadeInDown 1.5s ease-in-out;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 span {
+      color: #00c9ff;
+    }
+
+    section {
+      margin: 80px auto;
+      width: 90%;
+      max-width: 900px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      color: #0056b3;
+      margin-bottom: 20px;
+    }
+
+    .project-button {
+      background-color: #007bff;
+      color: white;
+      padding: 14px 28px;
+      margin-top: 20px;
+      display: inline-block;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .project-button:hover {
+      background-color: #0056b3;
+    }
+
+    .project-images img {
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .skill-images img {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project-images img:hover, .skill-images img:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+    }
+
+    a {
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Hi, I'm <span>Ariya M</span></h1>
+    <p><strong>BE Computer Science Student at Sathyabama University</strong></p>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am currently pursuing a Bachelor's degree in Engineering at Sathyabama University, specializing in Computer Science. I have a keen interest in coding, problem-solving, and exploring emerging technologies. My academic journey has equipped me with strong programming skills in Python, Java, and JavaScript. I am particularly passionate about machine learning and have developed projects like an Email and SMS Spam Detection System. I am always eager to learn, grow, and apply my knowledge to create innovative solutions.
+   </p>
+  </section>
+
+  <section id="projects">
+    <h2>My Project</h2>
+    <p>Email and SMS Spam Detection using Machine Learning</p>
+    <div class="project-images">
+      <img src="https://files.oaiusercontent.com/file-8SJRTCCodkbpCpwHMkAyrQ?se=2025-03-23T05%3A01%3A42Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D41f401c7-1be2-4362-a3b5-ae53c44fa060.webp&sig=3oJ0b3XBHJeRcrlQa2naMexrHB2BHOcFsKlNWypmlQ4%3D" alt="Spam Detection Project" />
+
+      <img src="https://media2.giphy.com/media/fIz5emApXM4HA3jI3C/200w.gif" alt="Spam Detection Project GIF" />
+    </div>
+    <a href="https://github.com/Ariyagh1930/ml_pride.git" target="_blank" class="project-button">View on GitHub</a>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-images">
+      <img src="https://media.licdn.com/dms/image/v2/D4D12AQEaTK5_cv5Fmg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1677082453584?e=2147483647&v=beta&t=VXl-woeyLRR0V2W5m4YVtXdzfqLLDZwowWRNcY-NXDc" alt="HTML" /> HTML
+      <img src="https://images.prismic.io/turing/652ebea8fbd9a45bcec8188d_What_Goes_Behind_Writing_a_Flawless_CSS_Code_37742e2bcf.webp?auto=format,compress" alt="CSS" /> CSS
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRss-86vRuxOArrVRmMgerLZ5pi8yCs6U7zsQ&s" alt="JavaScript" /> JavaScript
+      <img src="https://www.jrebel.com/sites/default/files/styles/social_preview_image/public/image/2020-05/image-blog-revel-top-java-tools.jpg?itok=34P5v4AD" alt="Java" /> Java
+      <img src="https://webandcrafts.com/_next/image?url=https%3A%2F%2Fadmin.wac.co%2Fuploads%2FFeatures_Of_Python_1_f4ccd6d9f7.jpg&w=4500&q=90" alt="Python" /> Python
+    </div>
+  </section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:ariya19032004@gmail.com">ariya19032004@gmail.com</a></p>
+    <p>Phone: <a href="tel:+919495877912">+91 9495877912</a></p>
+    <p>GitHub: <a href="https://github.com/Ariyagh1930a">https://github.com/Ariyagh1930</a></p>
+  </section>
+
+
+
+  <footer>
+    <p>© 2025 Ariya M. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
